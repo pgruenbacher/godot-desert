@@ -20,6 +20,7 @@ func _input(event):
 	if event.is_action_pressed('ui_select'):
 		var point = mouse2coords(event)
 		#print(point)
+		print("POINT", point)
 		emit_signal("map_picked", point)
 
 func mouse2coords(event):

@@ -34,7 +34,7 @@ filter/low_hanging_obstacles = false
 filter/ledge_spans = false
 filter/filter_walkable_low_height_spans = false
 
-[node name="ExampleMap3" type="Navigation"]
+[node name="ExampleMap2" type="Navigation"]
 
 up_vector = Vector3( 0, 1, 0 )
 script = ExtResource( 1 )

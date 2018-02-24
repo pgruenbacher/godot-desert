@@ -49,10 +49,11 @@ func _ready():
 	UnitMover.destination = Vector3(-10, 0, -10)
 	
 
-	
-
-func _process(delta):
+func _process(delta):	
 	var cam = get_tree().get_root().get_camera()
 	var screenPos = cam.unproject_position(translation)
 	get_node('SelectedIcon').set_position(Vector2(screenPos.x, screenPos.y))
+	
+
+func _physics_process(delta):
 	UnitMover.apply(delta)

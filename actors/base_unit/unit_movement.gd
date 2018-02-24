@@ -21,7 +21,7 @@ func apply(delta):
 	#if(len(pts) == 0):
 	#	print("DONE")
 	#	return
-	
+	print ("DEST", destination)
 	#var pt1
 	#print("LEN", len(pts))
 	#for i in len(pts):

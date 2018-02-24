@@ -9,7 +9,7 @@ var velocity = Vector3()
 var GRAVITY = -9.8
 var ACCELERATION = 3
 var DE_ACCELERATION = 5
-var MAX_SPEED = 6
+var MAX_SPEED = 12
 var MAX_FALL = 15
 const UP = Vector3(0, 1, 0)
 
@@ -18,13 +18,31 @@ func get_map_position():
 
 func apply(delta):
 	var pos = get_map_position()
+	#if(len(pts) == 0):
+	#	print("DONE")
+	#	return
 	
+	#var pt1
+	#print("LEN", len(pts))
+	#for i in len(pts):
+	#	pt1 = pts[0]
+	#	var diff = pos - pt1
+	#	if abs(diff.x) < 0.05 and abs(diff.z) < 0.05:
+	#		pts.remove(0)
+	#	else:
+	#		print("BREAK")
+	#		break
+	#
+	#print(len(pts))
+	#destination = pt1
 	redraw_destination_lines(pts)
 	
 	var dir = (destination - pos)
 	dir.y = 0
 	dir = dir.normalized()
 	velocity.y += delta * GRAVITY 
+	velocity.y = max(-10, velocity.y)
+	#print("DIR"
 	var hv = velocity 
 	hv.y = 0
 	var new_pos = dir * MAX_SPEED 
@@ -36,13 +54,16 @@ func apply(delta):
 	velocity.z = hv.z
 	var slope_stop_min_vel = 0.05
 	var max_slides = 4
-	var floor_max_angle = PI / 2
-	print("VEL", velocity)
-	velocity = node.move_and_slide(velocity, UP)
-	print("LEFTOVER", velocity)
-	print("TRAN", node.translation)
-	print("SLIDE COUNT", node.get_slide_count())
+	var floor_max_angle = deg2rad(90)
+	print("VELOCITY", velocity)
+	velocity = node.move_and_slide(velocity, UP, slope_stop_min_vel, max_slides, floor_max_angle)
+	#velocity = node.move_and_slide(velocity, UP)
+	#print("LEFTOVER", velocity)
+	#print("TRAN", node.translation)
+	#print("SLIDE COUNT", node.get_slide_count())
 	print("COLL?", node.is_on_floor(), node.is_on_wall(), node.is_on_ceiling())
+	if velocity.y == -1:
+		pass
 	return
 	
 	var desired_xz = destination - pos

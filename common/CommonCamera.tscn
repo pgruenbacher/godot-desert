@@ -13,7 +13,7 @@ _sections_unfolded = [ "Transform" ]
 
 [node name="Camera" type="Camera" parent="TurnTable/PitchTable" index="0"]
 
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 25.4482, 10.3866 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 36.698, 10.3866 )
 keep_aspect = 1
 cull_mask = 1048575
 environment = null

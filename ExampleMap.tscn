@@ -29,6 +29,7 @@ detail/sample_max_error = 1.0
 filter/low_hanging_obstacles = false
 filter/ledge_spans = false
 filter/filter_walkable_low_height_spans = false
+_sections_unfolded = [ "agent", "cell", "detail", "edge", "filter", "polygon", "region" ]
 
 [node name="ExampleMap" type="Navigation"]
 

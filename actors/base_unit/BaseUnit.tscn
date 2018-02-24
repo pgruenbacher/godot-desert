@@ -1,4 +1,4 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=5 format=2]
 
 [ext_resource path="res://actors/base_unit/BaseUnit.gd" type="Script" id=1]
 [ext_resource path="res://actors/base_unit/selectedIcon.png" type="Texture" id=2]
@@ -11,14 +11,30 @@ radial_segments = 64
 rings = 32
 is_hemisphere = false
 
-[node name="BaseUnit" type="Spatial"]
+[sub_resource type="SphereShape" id=2]
 
+radius = 1.0
+
+[node name="BaseUnit" type="KinematicBody"]
+
+input_ray_pickable = true
+input_capture_on_drag = false
+collision_layer = 1
+collision_mask = 1
+axis_lock_linear_x = false
+axis_lock_linear_y = false
+axis_lock_linear_z = false
+axis_lock_angular_x = false
+axis_lock_angular_y = false
+axis_lock_angular_z = false
+collision/safe_margin = 0.001
 script = ExtResource( 1 )
-_sections_unfolded = [ "Transform" ]
+_sections_unfolded = [ "Axis Lock", "Collision", "Transform", "collision" ]
 selected = false
 
 [node name="DefaultMsh" type="MeshInstance" parent="." index="0"]
 
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.220638, -0.0828938, 0.0846281 )
 layers = 1
 material_override = null
 cast_shadow = 1
@@ -31,7 +47,7 @@ lod_max_hysteresis = 0.0
 mesh = SubResource( 1 )
 skeleton = NodePath("..")
 material/0 = null
-_sections_unfolded = [ "material" ]
+_sections_unfolded = [ "Geometry", "LOD", "material" ]
 
 [node name="SelectedIcon" type="Control" parent="." index="1"]
 
@@ -67,5 +83,11 @@ size_flags_vertical = 1
 texture = ExtResource( 2 )
 stretch_mode = 0
 _sections_unfolded = [ "Anchor", "Focus", "Grow Direction", "Hint", "Margin", "Mouse", "Rect", "Size Flags", "Theme" ]
+
+[node name="CollisionShape" type="CollisionShape" parent="." index="2"]
+
+shape = SubResource( 2 )
+disabled = false
+_sections_unfolded = [ "Transform", "Visibility" ]
 
 

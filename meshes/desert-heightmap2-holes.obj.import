@@ -1,0 +1,19 @@
+[remap]
+
+importer="wavefront_obj"
+type="Mesh"
+path="res://.import/desert-heightmap2-holes.obj-d32a5baff67ffee1eefc082023be86de.mesh"
+
+[deps]
+
+files=[ "res://.import/desert-heightmap2-holes.obj-d32a5baff67ffee1eefc082023be86de.mesh" ]
+
+source_file="res://meshes/desert-heightmap2-holes.obj"
+source_md5="660f5575b6475d2932bb6b0a96f6669c"
+
+dest_files=[ "res://.import/desert-heightmap2-holes.obj-d32a5baff67ffee1eefc082023be86de.mesh", "res://.import/desert-heightmap2-holes.obj-d32a5baff67ffee1eefc082023be86de.mesh" ]
+dest_md5="a8ab3c719472d3b89c2c899f5e498ca4"
+
+[params]
+
+generate_tangents=true

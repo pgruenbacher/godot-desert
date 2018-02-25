@@ -13,7 +13,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="BaseUnit" parent="." index="0" instance=ExtResource( 2 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0279026, 9.90374, -0.0422392 )
-collision/safe_margin = 0.05
+collision/safe_margin = 0.005
 
 [node name="DirectionalLight" type="DirectionalLight" parent="." index="1"]
 

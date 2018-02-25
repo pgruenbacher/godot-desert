@@ -61,7 +61,7 @@ func apply(delta):
 	#velocity = node.move_and_slide(velocity, UP)
 	print("LEFTOVER", velocity)
 	#print("TRAN", node.translation)
-	#print("SLIDE COUNT", node.get_slide_count())
+	print("SLIDE COUNT", node.get_slide_count())
 	print("COLL?", node.is_on_floor(), node.is_on_wall(), node.is_on_ceiling())
 	if velocity.y == -1:
 		pass
@@ -89,7 +89,6 @@ var m = SpatialMaterial.new()
 
 
 func redraw_destination_lines(pts):
-	print("DRAW", len(pts))
 	var end_point = copy(destination)
 	var start_point = copy(get_map_position())
 	end_point.y += 1

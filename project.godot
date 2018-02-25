@@ -39,7 +39,7 @@ rotate_down=[ Object(InputEventKey,"resource_local_to_scene":false,"resource_nam
 
 [physics]
 
-3d/physics_engine="GodotPhysics"
+3d/physics_engine="Bullet"
 
 [rendering]
 

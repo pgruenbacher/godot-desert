@@ -13,6 +13,7 @@ _sections_unfolded = [ "Transform" ]
 [node name="BaseUnit" parent="." index="0" instance=ExtResource( 2 )]
 
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0279026, 9.90374, -0.0422392 )
+collision/safe_margin = 0.05
 
 [node name="DirectionalLight" type="DirectionalLight" parent="." index="1"]
 
@@ -43,6 +44,6 @@ directional_shadow_max_distance = 200.0
 
 [node name="CommonCamera" parent="." index="2" instance=ExtResource( 3 )]
 
-[node name="ExampleMap" parent="." index="3" instance=ExtResource( 4 )]
+[node name="ExampleMap3" parent="." index="3" instance=ExtResource( 4 )]
 
 

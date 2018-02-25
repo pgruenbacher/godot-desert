@@ -7,7 +7,7 @@ extends Spatial
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
-	$BaseUnit.navigation = $ExampleMap
+	$BaseUnit.navigation = $ExampleMap3
 
 #func _process(delta):
 #	# Called every frame. Delta is time since last frame.
